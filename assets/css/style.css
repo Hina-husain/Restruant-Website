@@ -58,7 +58,7 @@ body{
     color: #f5ea98;
 }
 .jneration{
-    background-color: #000000;
+   background-color: rgb(0, 0, 0);
     color: aliceblue;
 }
 .jneration h3{
@@ -69,6 +69,76 @@ body{
 }
 .jneration .last_span{
     color: white;
+}
+#Contact{
+   background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+#Contact #icon{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: darkgoldenrod;
+    font-size: 40px;
+}
+#Contact p{
+    padding-top: 15px;
+}
+#Contact #form{
+    margin-top: 25px;
+    width: 100%;
+}
+#Contact h3{
+    font-family: "Pacifico", cursive;
+    font-size: 35px;
+    color: darkgoldenrod;
+    padding-left: 0;
+    text-decoration: none;
+}
+
+#main2{
+    width: 100%;
+    height: 100vh; 
+    background-color: rgba(250, 236, 208, 0.514);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; 
+    
+}
+#main_div{
+    background-color: rgb(0, 0, 0);
+    border: 3px solid darkgoldenrod;
+    border-radius: 20px;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+#main2 #main_div input{
+    width: 55%;
+    padding: 13px;
+    text-align: center;
+}
+#main2 #main_div h1{
+    color:darkgoldenrod;
+}
+#main2 #main_div button{
+    background-color:#000000;
+    color: white;
+    padding: 10px 35px;
+    border-radius: none;
+    border: none;
+}
+#main2 #main_div button:hover{
+    background-color: white;
+    color:darkgoldenrod;
+    border: 1px solid black;
 }
 @media (max-width:767){
     #services .main_card {
