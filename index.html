@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title> Restaurant </title>
+    <title>Resturant </title>
     <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/Fontawesome/css/all.min.css">
@@ -47,11 +47,11 @@
                   <li class="nav-item">
                     <a class="nav-link text-dark" href="#HeroSection">Home</a>
                   </li>
-                     <li class="nav-item">
-                    <a class="nav-link text-dark" href="#services">Services</a>
-                  </li>
                   <li class="nav-item">
                     <a class="nav-link text-dark" href="#cards">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="#services">Services</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-dark" href="#Contact">Contact</a>
@@ -153,7 +153,7 @@
                 
               </div>
           </section>
-          <section id="explore" class="explore pt-5 pb-5">
+          <section class="explore pt-5 pb-5">
             <div class="container">
               <div class="row pt-5 pb-5">
                 <div class="col-lg-6 col-md-12 col-sm-12 ">
@@ -164,11 +164,61 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="321" height="179" viewBox="0 0 321 179" fill="none">
                     <path d="M1.00131 -38.7301C76.1451 -43.7071 251.271 -85.0197 247.686 60.7528C245.371 154.869 141.925 166.386 131.001 113.5C120.078 60.6139 297.932 49.9784 397.874 174.516" stroke="white" stroke-width="13"/>
                     </svg>
-                  <button class="btn bg-dark">Action To Call Now </button>
+                    <button class="btn bg-warning btn1 m-0 mt-5" onclick="showform()">Call For Action</button>  
                 </div>
               </div>
             </div>
           </section>
+
+          <section id="Contact">
+            <div class="container py-5">
+               <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                     <h1 class="text-center">Contact Us</h1>
+                     <hr>
+                  </div>
+               </div>
+               <div class="row">
+                 <div class="col-lg-4 col-md-4 col-sm-12 text-center custom_col">
+                   <i class="fa-solid fa-location-dot" id="icon"></i>
+                   <h4>OUR MAIN OFFICE</h4>
+                   <p>SoHo 94 Broadway St New York, NY 1001</p>
+                    
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-12 text-center custom_col">
+                   <i class="fa-solid fa-phone" id="icon"></i>
+                   <h4>PHONE NUMBER</h4>
+                   <p>234-9876-5400 <br>
+                    888-0123-4567 (Toll Free)</p>
+                 </div>
+                 <div class="col-lg-4 col-md-4 col-sm-12 text-center custom_col">
+                   <i class="fa-solid fa-envelope" id="icon"></i>
+                   <h4>MAIL</h4>
+                   <p>fastfood@gmail.com</p>
+                 </div>
+              </div>
+              <div class="row">
+                 <div class="col-lg-6 col-md-12 col-sm-12 pt-5 ps-5">
+                   <h3>Get a free case evaluation today!</h3> <br>
+                    <h5> AVAILABLE 24 HOURS A DAY!</h5>
+                  <div id="form">
+                   <form action="">
+                     <input type="text" class="form-control  " placeholder="Name" >
+                     <br>
+                     <input type="email" class="form-control  " placeholder="Email" >
+                     <br>
+                     <textarea name="" id="" class="form-control " placeholder="Comment"></textarea>
+                     <button class="btn bg-warning rounded-pill mt-3 text-white">Submit</button>
+                   </form>
+                  </div>
+                 </div>
+                 <div class="col-lg-6 col-md-12 col-sm-12 ps-5">
+                    <img src="assets/images/1000_F_204145161_3wIiEKDAZ6ZRMwFnYHvCZuyX68ut7hP1-removebg-preview.png" class="img-fluid" alt="">
+                 </div>
+              </div>
+            </div>
+         </section>
+   
 
           <section id="Custom">
             <div class="container-fluid mt-3">
@@ -239,8 +289,43 @@
               </div>
             </div>
           </section>
+
+
+          <div id="main2">
+            <div id="main_div">
+            <form action="" id="form">
+             <h2 class="text-warning pb-4">Welcome To Our <br> "Crave it, order it, love it <br> fresh food always!" <br> Login Here!</h2>
+             <input type="email" placeholder="Enter your email" name="email">
+             <br><br>
+             <input type="password" placeholder="Enter your password" name="password">
+             <br>
+             <button class="btn bg-warning rounded-pill mt-5" onclick="closeform()" class="btn mt-4">Close Here!</button>
+            </form>
+            </div>
+         </div>
           
 </body>
   <script src="assets/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
   <script src="assets/Fontawesome/js/all.min.js"></script>
+  <script>
+    document.getElementById('main2').style.display = 'none';
+
+    function showform(){
+        document.getElementById('main2').style.display = 'flex'; 
+    }
+    function closeform(){
+        document.getElementById('main2').style.display = 'none';
+    }
+    function submitData(){
+        var mainform = document.forms['form'];
+        var email = mainform['email'].value;
+        var password = mainform['password'].value;
+
+        document.getElementById('btn').style.display = 'none';
+        document.getElementById('Email').inner = email;
+
+        closeform();
+    }
+      // &times;
+</script>
 </html>
